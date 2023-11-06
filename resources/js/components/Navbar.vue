@@ -1,4 +1,22 @@
 <template>
+    <Disclosure as="nav" class="w-full h-12 bg-indigo-500">
+        <div
+            class="flex justify-between items-center mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8 text-white"
+        >
+            <div class="flex [&>h1]:mx-2">
+                <h1>Blacksburg, Virginia, United States</h1>
+                <h1>+1 (234) 567-8900</h1>
+            </div>
+
+            <div class="flex [&>*]:w-6 [&>*]:h-6 [&>*]:mx-2">
+                <GlobeAltIcon />
+                <GlobeAltIcon />
+                <GlobeAltIcon />
+                <GlobeAltIcon />
+            </div>
+        </div>
+    </Disclosure>
+
     <Disclosure as="nav" class="bg-white shadow" v-slot="{ open }">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 justify-between">
@@ -49,24 +67,11 @@
                             type="button"
                             class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                            <PlusIcon
-                                class="-ml-0.5 h-5 w-5"
+                            <PhoneIcon
+                                class="-ml-0.5 h-4 w-4"
                                 aria-hidden="true"
                             />
-                            New Job
-                        </button>
-                    </div>
-
-                    <div
-                        class="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center"
-                    >
-                        <button
-                            type="button"
-                            class="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                        >
-                            <span class="absolute -inset-1.5" />
-                            <span class="sr-only">View notifications</span>
-                            <BellIcon class="h-6 w-6" aria-hidden="true" />
+                            Contact us
                         </button>
                     </div>
                 </div>
@@ -103,7 +108,12 @@ import {
     MenuItem,
     MenuItems,
 } from "@headlessui/vue";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import {
+    Bars3Icon,
+    XMarkIcon,
+    PhoneIcon,
+    GlobeAltIcon,
+} from "@heroicons/vue/24/outline";
 import { PlusIcon } from "@heroicons/vue/20/solid";
 import navbarConfig from "../configs/navbar";
 import { ref } from "vue";
